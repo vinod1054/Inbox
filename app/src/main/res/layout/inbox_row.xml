@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="?listPreferredItemHeight"
+        android:clickable="true"
+    android:background="@drawable/selector_row"
+        android:focusable="true"
+        android:foreground="?selectableItemBackground">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/hiddenbackground"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@color/colorPrimary_green"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:paddingLeft="10dp"
+                android:src="@drawable/ic_block_white_24dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spamordelete"
+                android:textAlignment="center"
+                android:layout_weight="1"/>
+            <ImageView
+                android:layout_weight="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingRight="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_delete_white_24dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="8dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/contact_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="A"
+                android:textSize="27dp"
+                android:textColor="@android:color/white"
+                android:gravity="center" />
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textStyle=""
+                        android:textSize="16dp"
+                        android:gravity="left"
+                        android:layout_weight="0"
+                        android:id="@+id/title"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/time"
+                        android:text="time"
+                        android:textColor="@android:color/darker_gray"
+                        android:paddingRight="16dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:paddingBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxEms="16"
+                    android:id="@+id/subtitle"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
